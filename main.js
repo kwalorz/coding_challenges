@@ -69,3 +69,49 @@ class Circle {
 	getPerimeter(){return (2*Math.PI) * this.radius};
 }
 
+//Create a function which concatenates the number 7 to the end of every chord in an array. Ignore all chords which already end with 7.
+
+const jazzify = arr => arr.map(chord => {
+	if(chord.endsWith('7')) {
+			return chord;
+		} else {
+			return `${chord}7`;
+		}
+});
+
+
+/*Create a function that takes an object as an argument and returns a string with facts about the city. The city facts will need to be extracted from the object's three properties: name, population, continent.
+The string should have the following format: X has a population of Y and is situated in Z (where X is the city name, Y is the population and Z is the continent the city is situated in).*/
+
+function cityFacts(city) {
+	return `${city.name} has a population of ${city.population} and is situated in ${city.continent}`
+}
+
+//Given an object of how many more pages each ink color can print, output the maximum number of pages the printer can print before any of the colors run out.
+
+const inkLevels = inks => Math.min(...Object.values(inks));
+
+
+/*Try to imagine a world in which you might have to stay home for 14 days at any given time. Do you have enough TP to make it through?
+Although the number of squares per roll of TP varies significantly, we'll assume each roll has 500 sheets, and the average person uses 57 sheets per day.
+Create a function that will receive an object with two key/values:
+people ⁠— Number of people in the household.
+tp ⁠— Number of rolls.
+Return a statement telling the user if they need to buy more TP!*/
+
+function tpChecker(home) {
+	let sheets = home.tp * 500;
+	let usage = home.people * 57;
+	let total = Math.floor(sheets/usage);
+	if(total > 14) {
+		return `Your TP will last ${total} days, no need to panic!`
+	} else {
+		return `Your TP will only last ${total} days, buy more!`
+	}
+}
+
+//Create a function that determines whether a shopping order is eligible for free shipping. An order is eligible for free shipping if the total cost of items purchased exceeds $50.00.
+
+const freeShipping = order => {
+	 Object.values(order).reduce((total,item) => item += total) > 50 ? true : false;
+}

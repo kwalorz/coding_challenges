@@ -115,3 +115,12 @@ function tpChecker(home) {
 const freeShipping = order => {
 	 Object.values(order).reduce((total,item) => item += total) > 50 ? true : false;
 }
+
+/*Create a function that takes numbers b and m as arguments and returns the derivative of the function f(x)=x^b with respect to x evaluated at x=m, where b and m are constants.*/
+
+const derivative = (b, m) => b * Math.pow(m, b -1);
+
+/*Create a function that takes in an array (slot machine outcome) and returns true if all elements in the array are identical, and false otherwise. The array will contain 4 elements.*/
+
+const testJackpot = result => result.every(el => el === result[0]);
+

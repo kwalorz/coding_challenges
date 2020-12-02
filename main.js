@@ -124,3 +124,15 @@ const derivative = (b, m) => b * Math.pow(m, b -1);
 
 const testJackpot = result => result.every(el => el === result[0]);
 
+/*The .length property on an array will return the number of elements in the array. For example, the array below contains 2 elements:
+[1, [2, 3]]
+// 2 elements, number 1 and array [2, 3]
+Suppose we instead wanted to know the total number of non-nested items in the nested array. In the above case, [1, [2, 3]] contains 3 non-nested items, 1, 2 and 3.
+Write a function that returns the total number of non-nested items in a nested array.*/
+const getLength = arr => arr.flat(Infinity).length;
+ 
+/*Create a function that takes an array of strings and returns an array with only the strings that have numbers in them. If there are no strings containing numbers, return an empty array.*/
+
+const numInStr = arr => arr.filter(item => item.match(/\d+/g) ? item : '');
+
+

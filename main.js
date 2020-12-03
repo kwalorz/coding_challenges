@@ -135,4 +135,23 @@ const getLength = arr => arr.flat(Infinity).length;
 
 const numInStr = arr => arr.filter(item => item.match(/\d+/g) ? item : '');
 
+//Create a function to return the amount of potatoes there are in a string.
+
+const potatoes = str => str.match(/potato/g).length;
+
+
+//Create a function that takes a string and returns the number (count) of vowels contained within it.
+
+const countVowels = str => str.match(/[aeiou]/gi).length;
+
+//Use a regular expression to test for an empty string.
+
+const REGEXP = /^\s*$/g;
+
+//Create a function that takes an integer n and returns the nth tetrahedral number
+
+const tetra = n => (n * (n + 1) * (n + 2)) / 6;
+
+
+
 

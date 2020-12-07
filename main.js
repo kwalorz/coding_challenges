@@ -152,6 +152,62 @@ const REGEXP = /^\s*$/g;
 
 const tetra = n => (n * (n + 1) * (n + 2)) / 6;
 
+/*Create a function that returns true if the first array can be nested inside the second.
+arr1 can be nested inside arr2 if:
+arr1's min is greater than arr2's min.
+arr1's max is less than arr2's max.*/
+
+const canNest = (arr1, arr2) => {
+	return Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2)
+};
+
+
+/*Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.*/
+
+const addUp = num => {
+	if(num === 0) {
+		return num;
+	} else {
+		return num + addUp(num - 1);
+	}
+}
+ 
+ 
+ 
+/*Create a function that takes an array of numbers arr, a string str and return an array of numbers as per the following rules:
+"Asc" returns a sorted array in ascending order.
+"Des" returns a sorted array in descending order.
+"None" returns an array without any modification.*/
+
+const ascDesNone = (arr, str) => {
+	if(str == "Asc") {
+		return arr.sort((a,b) => a - b);
+	} else if(str == "Des") {
+		return arr.sort((a,b) => b - a);
+	} else {
+		return arr; 
+	}
+}
+ 
+//Create a function that squares every digit of a number.
+
+const squareDigits = n => {
+return Number(n.toString().split('').map(num => num * num).join(''));
+}
+ 
+ 
+/*An array is positive dominant if it contains strictly more unique positive values than unique negative values. Write a function that returns true if an array is positive dominant.*/
+
+const isPositiveDominant = a => {
+	return Array
+		.from(new Set(a))
+		.map(num => Math.sign(num))
+		.reduce((total, num) => total + num) 
+		> 0;
+}
+
+
+
 
 
 

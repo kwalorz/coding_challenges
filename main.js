@@ -210,6 +210,36 @@ const isPositiveDominant = a => {
 
 const nextEdge = (side1, side2) => (side1 + side2) -1;
 
+/*Your task is to create a Circle constructor that creates a circle with a radius provided by an argument. The circles constructed must have two methods getArea()and getPerimeter() which give both respective areas and perimeter (circumference).*/
+
+class Circle {
+	constructor(radius){
+		this.radius = radius
+	}
+	getPerimeter() {return 2 * Math.PI * this.radius}
+	
+	getArea(){return Math.PI * this.radius**2}
+}
+
+//Create a function that calculates the number of different squares in an n * n square grid.
+
+const numberSquares = n =>  n * (n+1) * (2*n + 1) / 6;
+
+//Create a function that takes an array and returns the sum of all items in the array.
+
+const sumArray = arr => {  
+	return	arr.flat(Infinity).reduce((total, num)=>total +num);
+}
+
+
+//Create a function that finds the highest integer in the array 
+
+const findHighest = arr => arr.sort((a,b) => a-b).pop();
+
+
+//Write a function that calculates the factorial of a number recursively.
+
+const factorial = n => n === 0 ? 1 : n * factorial(n-1);
 
 
 

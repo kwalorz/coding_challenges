@@ -241,6 +241,35 @@ const findHighest = arr => arr.sort((a,b) => a-b).pop();
 
 const factorial = n => n === 0 ? 1 : n * factorial(n-1);
 
+//Given an int, figure out how many ones, threes and nines you could fit into the number. You must create a class.
+
+class OnesThreesNines {
+	constructor(int) {
+		this.int = int;
+	}
+	
+	get ones() {
+		return this.int / 1;
+	}
+	
+	get threes() {
+		return Math.floor(this.int / 3);
+	}
+	
+	get nines() {
+		return Math.floor(this.int / 9);
+	}
+	
+}
+
+/*Create a function that determines whether a number is Oddish or Evenish. A number is Oddish if the sum of all of its digits is odd, and a number is Evenish if the sum of all of its digits is even. If a number is Oddish, return "Oddish". Otherwise, return "Evenish*/
+
+const oddishOrEvenish = num => {
+   return [...`${num}`]
+			.map(Number)
+			.reduce((a, b) => a + b) % 2 === 0 ? "Evenish" : "Oddish";
+}
+
 
 
 

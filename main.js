@@ -270,6 +270,34 @@ const oddishOrEvenish = num => {
 			.reduce((a, b) => a + b) % 2 === 0 ? "Evenish" : "Oddish";
 }
 
+/*Create a Book constructor that has two properties : Title, Author and two methods:
+A method named getTitle that returns: "Title: " + the instance title.
+A method named getAuthor that returns: "Author: " + the instance author.
+and instantiate this constructor by creating 3 new books:
+Pride and Prejudice - Jane Austen (PP)
+Hamlet - William Shakespeare (H)
+War and Peace - Leo Tolstoy (WP)*/
+class Book {
+	constructor(title, author){
+		this.title = title;
+		this.author =author; 
+	}
+	
+	getTitle(){
+		return `Title: ${this.title}`;
+	}
+	
+	getAuthor(){
+		return `Author: ${this.author}`;
+	}
+}
+ 
+const PP = new Book('Pride and Prejudice','Jane Austen');
+const H = new Book('Hamlet', 'William Shakespeare');
+const WP = new Book('War and Peace', 'Leo Tolstoy');
+ 
+ 
+ 
 
 
 

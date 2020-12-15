@@ -295,6 +295,14 @@ class Book {
 const PP = new Book('Pride and Prejudice','Jane Austen');
 const H = new Book('Hamlet', 'William Shakespeare');
 const WP = new Book('War and Peace', 'Leo Tolstoy');
+
+/*#34  /*You will be given an array of drinks, with each drink being an object with two properties: name and price. Create a function that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.*/
+
+const sortDrinkByPrice = drinks => {
+	return drinks.sort((a, b) => a.price > b.price ? 1 : -1);
+}
+
+
  
  
  

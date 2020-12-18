@@ -314,8 +314,35 @@ const mapping = letters => {
 	return Object.fromEntries(letters.map(letter => [letter , letter.toUpperCase()]));
 }
 
+/* #38 Create two objects containing full name, mass, and height of Mark and John. Calculate the BMI of each and return which one has the larger BMI */
 
+const mark = { 
+	fullName: 'Mark Miller',
+	mass: 78,
+	height: 1.69,
+	calBMI: function(){
+		this.bmi = this.mass / this.height**2;
+		return this.bmi
+	}
+}
 
+const john = { 
+	fullName: 'John Smith',
+	mass: 92,
+	height: 1.95,
+	calBMI: function(){
+		this.bmi = this.mass / this.height**2;
+		return this.bmi;
+	}
+}
+
+if(mark.bmi > john.bmi) {
+	return '${mark.fullName} has a larger BMI at ${mark.bmi}!';
+} else if(mark.bmi = john.bmi) {
+	return '${mark.fullName} and ${john.fullName}\'s BMI are the same at ${mark.bmi}';
+} else {
+	'${john.fullName}\'s BMI has a larger BMI at ${john.bmi}';
+}
  
  
  

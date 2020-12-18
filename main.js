@@ -308,6 +308,13 @@ const maximumScore = tileHand => {
 	return tileHand.map(obj => obj.score).reduce((sum, num) => sum + num);
 }
 
+/* #37 Write a function that creates an object with each (key, value) pair being the (lower case, upper case) versions of a letter, respectively. */
+
+const mapping = letters => {
+	return Object.fromEntries(letters.map(letter => [letter , letter.toUpperCase()]));
+}
+
+
 
  
  

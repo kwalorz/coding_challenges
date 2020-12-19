@@ -343,7 +343,14 @@ if(mark.bmi > john.bmi) {
 } else {
 	'${john.fullName}\'s BMI has a larger BMI at ${john.bmi}';
 }
+
+/* #39 Create a function that checks to see if one team's average score is double that of the opposing team's average score. Each team will give you 3 scores as paramters*/
  
+const doubleAverage = (team1, team2) => {
+	return 
+		team1.reduce((total, score) => total + score) / team1.length > team2.reduce((total, score) => total + score) / team2.length ? 
+		 'Team 1 wins!' : 'Team 2 wins!';
+}
  
  
 

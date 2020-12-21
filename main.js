@@ -358,3 +358,10 @@ const doubleAverage = (team1, team2) => {
     ? 'Team 1 wins!'
     : 'Team 2 wins!';
 };
+
+/* #40 The insurance guy calls again and apologizes. They found another policy made by your spouse, but this one is limited to cover a particular maximum in losses (for example, 50,000€). You send a bill to your spouse for the difference you lost.
+Given an object of the stolen items and a limit, return the difference between the total value of those items and the limit of the policy.*/
+
+const calculateDifference = (obj, limit) => {
+  return Object.values(obj).reduce((total, price) => total + price) - limit;
+};

@@ -377,3 +377,7 @@ function enoughChange(change, amountDue) {
 
   return total >= amountDue;
 }
+
+/* #42 Create a function that takes an array of numbers and returns the second largest number.*/
+
+const secondLargest = arr => arr.sort((a, b) => a - b)[arr.length - 2];

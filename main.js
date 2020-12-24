@@ -365,3 +365,15 @@ Given an object of the stolen items and a limit, return the difference between t
 const calculateDifference = (obj, limit) => {
   return Object.values(obj).reduce((total, price) => total + price) - limit;
 };
+
+/* #41 Given a total due and a list representing the amount of change in your pocket, determine whether or not you are able to pay for the item. Change will always be represented in the following order: quarters, dimes, nickels, pennies.*/
+
+function enoughChange(change, amountDue) {
+  let quarters = change[0] * 0.25;
+  let dimes = change[1] * 0.1;
+  let nickels = change[2] * 0.05;
+  let pennies = change[3] * 0.01;
+  let total = quarters + dimes + nickels + pennies;
+
+  return total >= amountDue;
+}

@@ -381,3 +381,8 @@ function enoughChange(change, amountDue) {
 /* #42 Create a function that takes an array of numbers and returns the second largest number.*/
 
 const secondLargest = arr => arr.sort((a, b) => a - b)[arr.length - 2];
+
+/* #43 In a board game, a piece may advance 1-6 tiles forward depending on the number rolled on a six-sided dice. If you advance your piece onto the same tile as another player's piece, both of you earn a bonus. You cannot move backward.
+Given you and your friend's tile number(argument b), create a function that returns if it's possible to earn a bonus when you roll the dice.*/
+
+const possibleBonus = (a, b) => a >= !b && b - a > !6;

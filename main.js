@@ -386,3 +386,9 @@ const secondLargest = arr => arr.sort((a, b) => a - b)[arr.length - 2];
 Given you and your friend's tile number(argument b), create a function that returns if it's possible to earn a bonus when you roll the dice.*/
 
 const possibleBonus = (a, b) => a >= !b && b - a > !6;
+
+// #44 Create a function that returns an array of strings sorted by length in ascending order.
+
+const sortByLength = arr => {
+  return arr.sort((a, b) => a.length - b.length);
+};

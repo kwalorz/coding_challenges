@@ -405,3 +405,7 @@ function emotify(str) {
   };
   return `Make me ${emoticons[str.split(' ').pop()]}`;
 }
+
+// #46 Create a function that returns true if a string is empty and false otherwise;
+
+const isEmpty = s => s === '';

@@ -393,18 +393,15 @@ const sortByLength = arr => {
   return arr.sort((a, b) => a.length - b.length);
 };
 
-/* #45 Create a function that changes specific words into emoticons. Given a sentence as a string, replace the words smile, grin, sad and mad with their corresponding emoticons. Try to solve this without using statements like if/else or switch.
- */
+/* #45 Create a function that changes specific words into emoticons. 
+Given a sentence as a string, replace the words smile, grin, sad and mad with their corresponding emoticons. Try to solve this without using conditional statements like if/else or switch.*/
 
 function emotify(str) {
   const emoticons = {
     smile: ':D',
     grin: ':)',
     sad: ':(',
-    mad: '>:(',
+    mad: ':P',
   };
-  const { smile, grin, sad, mad } = emoticons;
-
-  let keyWord = str.split(' ').pop();
-  return Object.keys(emoticons);
+  return `Make me ${emoticons[str.split(' ').pop()]}`;
 }

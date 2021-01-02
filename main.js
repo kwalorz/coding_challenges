@@ -409,3 +409,7 @@ function emotify(str) {
 // #46 Create a function that returns true if a string is empty and false otherwise;
 
 const isEmpty = s => s === '';
+
+// #47 Given two strings, firstName and lastName, return a single string in the format "last, first".
+
+const concatName = (firstName, lastName) => `${lastName}, ${firstName}`;

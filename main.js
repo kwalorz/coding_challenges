@@ -1,4 +1,4 @@
-/* #1 Create the instance properties fullname and email in the Employee class. Given a person's first and last names:
+l; /* #1 Create the instance properties fullname and email in the Employee class. Given a person's first and last names:
 Form the fullname by simply joining the first and last name together, separated by a space.
 Form the email by joining the first and last name together with a . in between, and follow it with @company.com at the end. Make sure the entire email is in lowercase.*/
 
@@ -413,3 +413,13 @@ const isEmpty = s => s === '';
 // #47 Given two strings, firstName and lastName, return a single string in the format "last, first".
 
 const concatName = (firstName, lastName) => `${lastName}, ${firstName}`;
+
+/* #48 Try to write a function to flatten an array of subarrays into one array. (Suppose you are  unware there is a .flat() method in the Array prototype). In other words, you want to transform this: [[1, 2], [3, 4]] into [1, 2, 3, 4] without .flat().*/
+
+function flatten(...arr) {
+  return arr;
+}
+
+// #49 Given two arguments, return an array which contains these two arguments.
+
+const makePair = (num1, num2) => [num1, num2];

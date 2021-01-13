@@ -423,3 +423,10 @@ function flatten(...arr) {
 // #49 Given two arguments, return an array which contains these two arguments.
 
 const makePair = (num1, num2) => [num1, num2];
+
+// #50 Create a function that moves all capital letters to the front of a word.
+
+function capToFront(s) {
+  let caps = s.match(/[A-Z]/g);
+  return caps.concat(s.replace(/[A-Z]/g, '').split('')).join('');
+}

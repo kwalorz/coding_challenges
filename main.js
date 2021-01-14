@@ -430,3 +430,8 @@ function capToFront(s) {
   let caps = s.match(/[A-Z]/g);
   return caps.concat(s.replace(/[A-Z]/g, '').split('')).join('');
 }
+
+// #51 Check if a string title is a title string or not. A title string is one which has all the words in the string start with a upper case letter.
+
+const checkTitle = title =>
+  title.split(' ').every(word => word[0] === word[0].toUpperCase());

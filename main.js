@@ -435,3 +435,14 @@ function capToFront(s) {
 
 const checkTitle = title =>
   title.split(' ').every(word => word[0] === word[0].toUpperCase());
+
+/*  #52 Create a function that takes 2 arrays of dog’s ages(‘dogsJulia’ and dogsKate) and tells whether not a dog is an adult(3 years old and up) or a puppy(less than 3 years old). Also, there are some surprises thrown in the mix as follows:
+Julia found out that the owners of the first and last 2 dogs actually are cats, not dogs. Find a way to remove the cats and display the corrected data*/
+
+function getDogs(dogsJulia, dogsKate) {
+  return [...dogsJulia.slice(1, -2), ...dogsKate].map((age, i) => {
+    return age >= 3
+      ? `Dog number ${i + 1} is an adult, and is ${age} years old.`
+      : `Dog number ${i + 1} is still a puppy!`;
+  });
+}

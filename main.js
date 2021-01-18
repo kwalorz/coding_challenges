@@ -446,3 +446,11 @@ function getDogs(dogsJulia, dogsKate) {
       : `Dog number ${i + 1} is still a puppy!`;
   });
 }
+
+// #53 Create a function that takes an array of ages and returns the average age for only the adults in the group
+
+function calcAverageAge(ages) {
+  return ages
+    .map(age => age >= 18)
+    .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+}

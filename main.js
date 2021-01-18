@@ -454,3 +454,8 @@ function calcAverageAge(ages) {
     .map(age => age >= 18)
     .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
 }
+
+// #54 Create a function that takes two arguments of an array of numbers arr and a constant number n and returns the n largest numbers from the given array.
+
+const largestNumbers = (n, arr) =>
+  n === 0 ? [] : arr.sort((a, b) => a - b).slice(-n);

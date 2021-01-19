@@ -459,3 +459,7 @@ function calcAverageAge(ages) {
 
 const largestNumbers = (n, arr) =>
   n === 0 ? [] : arr.sort((a, b) => a - b).slice(-n);
+
+// #55 Create a function that will take a HEX number and returns the binary equivalent (as a string).
+
+const toBinary = num => num.toString(2);

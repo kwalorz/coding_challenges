@@ -490,3 +490,16 @@ function reverseOdd(str) {
 // #58  Write a function that takes a credit card number and only displays the last four characters. The rest of the card number must be replaced by ************.
 
 const cardHide = card => card.slice(-4).padStart(card.length, '*');
+
+// #59 Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+
+function reverseCase(str) {
+  return str
+    .split('')
+    .map(letter => {
+      return letter === letter.toUpperCase()
+        ? letter.toLowerCase()
+        : letter.toUpperCase();
+    })
+    .join('');
+}

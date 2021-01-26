@@ -503,3 +503,36 @@ function reverseCase(str) {
     })
     .join('');
 }
+
+/* #60  Write a function that takes a string and returns a string with the correct case for character titles in the Game of Thrones series.
+The words and, the, of and in should be lowercase.
+All other words should have the first character as uppercase and the rest lowercase. */
+function correctTitle(str) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map(word => {
+      if (word === 'the' || word === 'of' || word === 'in' || word === 'and') {
+        return word;
+      } else if (word.includes('-')) {
+        return word
+          .split('-')
+          .map(word => {
+            if (
+              word === 'the' ||
+              word === 'of' ||
+              word === 'in' ||
+              word === 'and'
+            ) {
+              return word;
+            } else {
+              return `${word[0].toUpperCase().concat(word.slice(1))}`;
+            }
+          })
+          .join('-');
+      } else {
+        return `${word[0].toUpperCase().concat(word.slice(1))}`;
+      }
+    })
+    .join(' ');
+}

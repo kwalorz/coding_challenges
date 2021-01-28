@@ -536,3 +536,13 @@ function correctTitle(str) {
     })
     .join(' ');
 }
+
+/* #61 Create a function that takes any nonnegative number as an argument and return it with it's digits in descending order. Descending order is when you sort from highest to lowest.*/
+
+function sortDescending(num) {
+  return Number(
+    Array.from(String(num))
+      .sort((a, b) => b - a)
+      .join('')
+  );
+}

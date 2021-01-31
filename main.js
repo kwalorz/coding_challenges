@@ -547,7 +547,7 @@ function sortDescending(num) {
   );
 }
 
-/* Suppose you get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
+/* # 62 Suppose you get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
 1. Create one player array for each team (variables 'players1' and 'players2')
 
 2. The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players
@@ -619,5 +619,6 @@ function printGoals(...players) {
   console.log(players);
 }
 
-team1 < team 2 && console.log('Team 1 is more likely to win');
-team1 > team 2 && console.log('Team 2 is more likely to win');
+// #63 Create a function that takes a word and returns the new word without including the first character.
+
+const newWord = str => [...str].slice(1).join('');

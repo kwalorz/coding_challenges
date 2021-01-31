@@ -622,3 +622,7 @@ function printGoals(...players) {
 // #63 Create a function that takes a word and returns the new word without including the first character.
 
 const newWord = str => [...str].slice(1).join('');
+
+// #64 Write a function that removes any non-letters from a string, returning a well-known film title.
+
+const lettersOnly = str => str.match(/[a-z]/gi).join('');

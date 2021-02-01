@@ -626,3 +626,13 @@ const newWord = str => [...str].slice(1).join('');
 // #64 Write a function that removes any non-letters from a string, returning a well-known film title.
 
 const lettersOnly = str => str.match(/[a-z]/gi).join('');
+
+// #65 Create a  calculator that takes an array of bill values and tips 15% if the bill is between 50 and 300,  and 20% if the value is different. The result should be the total check paid(bill plus tip).
+
+function calcCheck(bills) {
+  return bills.map(bill =>
+    bill >= 50 && bill <= 300
+      ? bill * (15 / 100) + bill
+      : bill * (20 / 100) + bill
+  );
+}
